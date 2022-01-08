@@ -10,6 +10,7 @@ import Team from './pages/team/Team';
 import FirstQuater from './pages/first-quater/FirstQuater';
 import PlayerState from './context/player/playerState';
 import TeamCreated from './pages/team-created/TeamCreated';
+import AddTeamPlayer from './pages/team/AddTeamPlayer';
 
 function App() {
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
           <Route path='/first-quater' element={<FirstQuater />} />
           <Route path='/team-created' element={<TeamCreated />} />
         </Routes>
+        <AddTeamPlayer />
       </Router>
     </PlayerState>
   );

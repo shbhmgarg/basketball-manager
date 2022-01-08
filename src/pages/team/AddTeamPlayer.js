@@ -20,7 +20,6 @@ const AddTeamPlayer = () => {
     { Position: 'Power Forward (PF)' },
     { Position: 'Center (C)' }
   ]);
-
   const playerContext = useContext(PlayerContext);
   const { addPlayer, modalMount, modalMounting } = playerContext;
 
@@ -89,6 +88,7 @@ const AddTeamPlayer = () => {
     multiselectRef.current.resetSelectedValues();
     setMounted(false);
     modalMounting(false);
+    M.toast({ html: 'Player added successfully' });
   };
 
   const closeModal = (e) => {

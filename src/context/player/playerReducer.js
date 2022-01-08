@@ -29,10 +29,17 @@ export default (state, action) => {
     case GET_PLAYERS:
       let playersStorage = localStorage.getItem('players');
       playersStorage = JSON.parse(playersStorage);
-      return {
-        ...state,
-        players: playersStorage
-      };
+      if (playersStorage) {
+        return {
+          ...state,
+          players: playersStorage
+        };
+      } else {
+        return {
+          state,
+          players: []
+        };
+      }
     case MODAL_MOUNT_TRUE:
       return {
         ...state,

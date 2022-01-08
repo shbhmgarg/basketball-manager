@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { useEffect } from 'react/cjs/react.development';
 import AddBtn from '../../components/layout/AddBtn';
 import PlayerContext from '../../context/player/playerContext';
-import AddTeamPlayer from './AddTeamPlayer';
 import PlayerItem from './PlayerItem';
 
 const Team = () => {
@@ -31,8 +30,6 @@ const Team = () => {
         </ul>
       </div>
       <AddBtn />
-
-      <AddTeamPlayer />
     </div>
   );
 };
