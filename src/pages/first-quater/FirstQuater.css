@@ -1,0 +1,16 @@
+.bg-image {
+  background-image: url(./basketball.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+  min-height: calc(100vh - 64px);
+}
+
+.invalid-select,
+.error-text {
+  border: 1px solid red;
+}
+
+.error-span {
+  color: red !important;
+}

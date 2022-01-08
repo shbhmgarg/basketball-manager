@@ -1,0 +1,42 @@
+.main {
+  background-image: url(../../../public/assets/images/bulls.jpg);
+  width: 100%;
+  min-height: calc(100vh - 64px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(57, 57, 57, 0.6);
+  filter: brightness(80%);
+  transition: all 0.3s ease;
+}
+
+.heading-text {
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #ffcdd2;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.8s ease;
+}
+
+.overlay:hover {
+  filter: brightness(100%);
+}
+
+.overlay:hover .heading-text {
+  transform: scale(1.5, 1.5);
+}

@@ -1,0 +1,6 @@
+.main-table-div {
+  background-image: url('./ball.jpg');
+  height: calc(100vh - 64px);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

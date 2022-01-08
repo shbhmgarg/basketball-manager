@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './pages/home/Home';
+import Navbar from './components/layout/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css/dist/js/materialize.min.js';
+import { useEffect } from 'react';
+import Team from './pages/team/Team';
+import FirstQuater from './pages/first-quater/FirstQuater';
+import PlayerState from './context/player/playerState';
+import TeamCreated from './pages/team-created/TeamCreated';
 
 function App() {
+  useEffect(() => {
+    // Init Materialize JS
+    M.AutoInit();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PlayerState>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/create-team' element={<Team />} />
+          <Route path='/first-quater' element={<FirstQuater />} />
+          <Route path='/team-created' element={<TeamCreated />} />
+        </Routes>
+      </Router>
+    </PlayerState>
   );
 }
 
